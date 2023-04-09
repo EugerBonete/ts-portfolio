@@ -4,9 +4,13 @@ import { hoverVariant } from "./Animations/scaleHover";
 import { motion } from "framer-motion";
 import { BsGithub } from "react-icons/bs";
 
-export default function Social() {
+export default function Social({ sm }: { sm?: boolean }) {
   return (
-    <ul className="text-xl gap-10 hidden md:flex">
+    <ul
+      className={`${
+        sm ? "text-xl gap-10 flex flex-1" : "text-xl gap-10 hidden md:flex"
+      }`}
+    >
       <Link href="/">
         <motion.img
           whileHover={hoverVariant}
